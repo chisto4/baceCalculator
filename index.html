@@ -5,86 +5,95 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
   <title>Calculator</title>
 </head>
 <body>
   <main>
     <div class="calc_wrapper">
-      <div class="dispaly_wrapper">HELLO 123</div>
+      <label>
+        <input type="checkbox">
+        <span class="check"></span>
+      </label>
+      <div id="display_2" class="dispaly_wrapper"></div>
+      <div id="display_3" class="dispaly_wrapper"></div>
+      <div id="display" class="dispaly_wrapper">HELLO</div>
       <div class="button_block_wrapper">
 
         <div class="button_line">
-          <div class="button_wrapper">
-            <button>DEL</button>
+          <div id="del" class="button_wrapper">
+            <button type="button">DEL</button>
           </div>
-          <div class="button_wrapper">
-            <button>CE</button>
+          <div id="ce" class="button_wrapper coorect_button">
+            <button type="button">CE</button>
           </div>
-          <div class="button_wrapper">
-            <button>C</button>
+          <div id="c" class="button_wrapper coorect_button">
+            <button type="button">C</button>
           </div>
-          <div class="button_wrapper">
-            <button>+/-</button>
-          </div>
-        </div>
-
-        <div class="button_line">
-          <div class="button_wrapper">
-            <button>7</button>
-          </div>
-          <div class="button_wrapper">
-            <button>8</button>
-          </div>
-          <div class="button_wrapper">
-            <button>9</button>
-          </div>
-          <div class="button_wrapper">
-            <button>/</button>
+          <div id="revers" class="button_wrapper operattor_button">
+            <button value="-" type="button">+/-</button>
           </div>
         </div>
 
         <div class="button_line">
           <div class="button_wrapper">
-            <button>4</button>
+            <button  value="7" type="button">7</button>
           </div>
           <div class="button_wrapper">
-            <button>5</button>
+            <button value="8" type="button">8</button>
           </div>
           <div class="button_wrapper">
-            <button>6</button>
+            <button value="9" type="button">9</button>
           </div>
-          <div class="button_wrapper">
-            <button>*</button>
-          </div>
-        </div>
-
-        <div class="button_line">
-          <div class="button_wrapper">
-            <button>1</button>
-          </div>
-          <div class="button_wrapper">
-            <button>2</button>
-          </div>
-          <div class="button_wrapper">
-            <button>3</button>
-          </div>
-          <div class="button_wrapper">
-            <button>-</button>
+          <div id="divide" class="button_wrapper operattor_button">
+            <button value="/" type="button">/</button>
           </div>
         </div>
 
         <div class="button_line">
           <div class="button_wrapper">
-            <button>0</button>
+            <button value="4" type="button">4</button>
           </div>
           <div class="button_wrapper">
-            <button>.</button>
+            <button value="5" type="button">5</button>
           </div>
           <div class="button_wrapper">
-            <button>+</button>
+            <button value="6" type="button">6</button>
+          </div>
+          <div id="multiply" class="button_wrapper operattor_button">
+            <button value="*" type="button">*</button>
+          </div>
+        </div>
+
+        <div class="button_line">
+          <div class="button_wrapper">
+            <button value="1" type="button">1</button>
           </div>
           <div class="button_wrapper">
-            <button>=</button>
+            <button value="2" type="button">2</button>
+          </div>
+          <div class="button_wrapper">
+            <button value="3" type="button">3</button>
+          </div>
+          <div id="subtract" class="button_wrapper operattor_button">
+            <button value="-" type="button">-</button>
+          </div>
+        </div>
+
+        <div class="button_line">
+          <div class="button_wrapper">
+            <button value="0" type="button">0</button>
+          </div>
+          <div id="point" class="button_wrapper operattor_button">
+            <button value="." type="button">.</button>
+          </div>
+          <div id="summ" class="button_wrapper operattor_button">
+            <button value="+" type="button">+</button>
+          </div>
+          <div id="result" class="button_wrapper">
+            <button type="submit">=</button>
           </div>
         </div>
 
@@ -92,5 +101,6 @@
       </div>
     </div>
   </main>
+  <script src="./calc.js" />
 </body>
 </html>

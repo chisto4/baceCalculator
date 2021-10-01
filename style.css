@@ -1,3 +1,9 @@
+body {
+  font-family: 'Special Elite', cursive;
+  background: -webkit-gradient(linear, left bottom, right top, color-stop(30%, #839aa0), color-stop(80%, #507497));
+  background: linear-gradient(to top right, #839aa0 30%, #507497 80%);
+}
+
 main {
   width: 100vw;
   height: 100vh;
@@ -12,6 +18,69 @@ main {
           align-items: center;
 }
 
+input[type="checkbox"] {
+  -webkit-appearance: none;
+  visibility: hidden;
+  display: none;
+}
+
+.check {
+  position: relative;
+  left: 46%;
+  top: 50%;
+  display: block;
+  width: 40px;
+  height: 20px;
+  background: #092c3e;
+  cursor: pointer;
+  border-radius: 20px;
+  overflow: hidden;
+  -webkit-transition: ease-in 0.5s;
+  transition: ease-in 0.5s;
+}
+
+input[type="checkbox"]:checked ~ .check {
+  background: #fff;
+  -webkit-box-shadow: 0 0 0 1200px #092c3e;
+          box-shadow: 0 0 0 1200px #092c3e;
+}
+
+input[type="checkbox"]:checked ~ .check:before {
+  -webkit-transform: translateX(-50px);
+          transform: translateX(-50px);
+}
+
+.check::before {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  background: #fff;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.check::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  background: #fff;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+input[type="checkbox"]:checked ~ .check:after {
+  -webkit-transform: translateX(-50px);
+          transform: translateX(-50px);
+}
+
 .calc_wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -24,11 +93,13 @@ main {
   height: 760px;
   background: -webkit-gradient(linear, left bottom, left top, color-stop(30%, #4a4e4f), color-stop(80%, #1d2125));
   background: linear-gradient(to top, #4a4e4f 30%, #1d2125 80%);
+  -webkit-box-shadow: -23px 20px 50px rgba(81, 81, 100, 0.644), 15px -10px 35px rgba(163, 152, 135, 0.493);
+          box-shadow: -23px 20px 50px rgba(81, 81, 100, 0.644), 15px -10px 35px rgba(163, 152, 135, 0.493);
   border-radius: 30px;
 }
 
 .dispaly_wrapper {
-  height: 35%;
+  height: 20%;
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
   display: -webkit-box;
@@ -45,6 +116,16 @@ main {
   color: #a6adad;
   font-size: 24px;
   text-shadow: gray 2px 3px 5px;
+}
+
+#display_2 {
+  font-size: 18px;
+  opacity: 0.6;
+}
+
+#display_3 {
+  font-size: 36px;
+  color: white;
 }
 
 .button_line {
@@ -64,6 +145,7 @@ main {
 .button_block_wrapper {
   width: 100%;
   height: 100%;
+  margin-bottom: 10px;
 }
 
 .button_wrapper {
@@ -78,21 +160,64 @@ main {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background: -webkit-gradient(linear, left bottom, left top, color-stop(30%, #3c3e42), color-stop(80%, #35393c));
-  background: linear-gradient(to top, #3c3e42 30%, #35393c 80%);
-  border-radius: 40px;
+  padding-top: 5px;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(30%, #3c3e42), color-stop(80%, #35393c));
+  background: linear-gradient(to bottom, #3c3e42 30%, #35393c 80%);
+  border-radius: 35px;
   -webkit-box-shadow: -20px 10px 25px rgba(62, 62, 63, 0.644), 3px -3px 15px rgba(105, 105, 105, 0.493);
           box-shadow: -20px 10px 25px rgba(62, 62, 63, 0.644), 3px -3px 15px rgba(105, 105, 105, 0.493);
+  border: 1px solid rgba(89, 95, 109, 0.5);
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
 }
 
 .button_wrapper:hover {
-  border: 1px solid rgba(15, 48, 138, 0.87);
+  border: 1px solid rgba(53, 95, 211, 0.87);
+  -webkit-transform: scale(104%);
+          transform: scale(104%);
 }
 
 .button_wrapper button {
+  font-family: 'Special Elite', cursive;
   background: none;
   border: none;
   font-size: 26px;
-  color: #a2a8ab;
+  color: rgba(255, 255, 255, 0.952);
+}
+
+.operattor_button {
+  background: rgba(201, 154, 66, 0.877);
+}
+
+.operattor_button:hover {
+  border: 1px solid #e69e03;
+}
+
+.coorect_button {
+  background: rgba(255, 121, 43, 0.877);
+}
+
+.coorect_button:hover {
+  border: 1px solid #ff0202;
+}
+
+#result {
+  background: #296dbb;
+}
+
+#result:hover {
+  border: 1px solid #c44e4e;
+}
+
+#del {
+  background: #d65730;
+}
+
+#del:hover {
+  border: 1px solid #a80e0e;
+  -webkit-transform: rotate(720deg);
+          transform: rotate(720deg);
+  -webkit-transition: 2s;
+  transition: 2s;
 }
 /*# sourceMappingURL=style.css.map */
