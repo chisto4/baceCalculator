@@ -45,7 +45,7 @@ main{
 }
 
 #display_3{
-  font-size: 36px;
+  font-size: 28px;
   color: white;
 }
 
@@ -114,7 +114,5 @@ main{
   background: rgb(214, 87, 48);
   &:hover{
     border: 1px solid rgb(168, 14, 14);
-    transform: rotate(720deg);
-    transition: 2s;
   }
 }

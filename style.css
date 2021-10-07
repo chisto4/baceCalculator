@@ -61,7 +61,7 @@ main {
 }
 
 #display_3 {
-  font-size: 36px;
+  font-size: 28px;
   color: white;
 }
 
@@ -152,9 +152,5 @@ main {
 
 #del:hover {
   border: 1px solid #a80e0e;
-  -webkit-transform: rotate(720deg);
-          transform: rotate(720deg);
-  -webkit-transition: 2s;
-  transition: 2s;
 }
 /*# sourceMappingURL=style.css.map */
